@@ -54,6 +54,16 @@ class Table
         System.out.println("退選成功: " + number);
         credit -= cd;
     }
+    
+    public void show (Course[] c) {
+        for(int i=0; i<16; i++){
+            for(int j=0; j<size; j++) {
+                if(c[i].getNum() == coursesNum[j]) {
+                    c[i].show();
+                }
+            }
+        }
+    }
 
 
 }
