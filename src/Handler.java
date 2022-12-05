@@ -1,16 +1,6 @@
 import java.util.Scanner;
 
 public class Handler {
-
-    public static void show (Table t, Course[] c) {
-        for(int i=0; i<16; i++){
-            for(int j=0; j<t.size; j++) {
-                if(c[i].getNum() == t.coursesNum[j]) {
-                    c[i].show();
-                }
-            }
-        }
-    }
     
     public static void main(String[] args)
     {
