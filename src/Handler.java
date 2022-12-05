@@ -2,6 +2,16 @@ import java.util.Scanner;
 
 public class Handler {
 
+    public static void show (Table t, Course[] c) {
+        for(int i=0; i<16; i++){
+            for(int j=0; j<t.size; j++) {
+                if(c[i].getNum() == t.coursesNum[j]) {
+                    c[i].show();
+                }
+            }
+        }
+    }
+    
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
@@ -65,13 +75,7 @@ public class Handler {
                     c[i].show();
             }else if(mode == 5)
             {
-                for(int i=0; i<16; i++) {
-                    for(int j=0; j<t.size; j++) {
-                        if(c[i].getNum() == t.coursesNum[j]) {
-                            c[i].show();
-                        }
-                    }
-                }
+                show(t,c);
             }else
                 System.out.println("Invalid input");
         }
